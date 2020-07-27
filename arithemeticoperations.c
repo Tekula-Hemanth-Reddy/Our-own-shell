@@ -1,10 +1,11 @@
 #include<stdio.h>
+#include<math.h>
 
-//do it
+//for Arithemetic operations like Addition,Substraction,Division,Multiplication
 
 void division(double a,double b)
 {
-	printf("Quotient is %lf Remainder is %lf\n",a/b,a%b);
+	printf("Quotient is %lf \n",a/b);
 }
 void multiplication(double a,double b)
 {
@@ -20,21 +21,16 @@ void substraction(double a,double b)
 	printf("Difference is %lf\n",a-b);
 }
 
-void modulo(double a,double b)
-{
-	printf("Modulo is %lf\n",a%b);
-}
-
-void Arithemeticfunctions(char *str)
+void Arithemeticfunctions(char str[])
 {
 	double a;
 	double b;
 	
 	printf("Enter the First Number\n");
-	scanf("%ld",&a);
+	scanf("%lf",&a);
 	
 	printf("Enter the Second Number\n");
-	scanf("%ld",&b);
+	scanf("%lf",&b);
 	
 	
 	if((strcmp(str,"add"))==0)
@@ -42,27 +38,20 @@ void Arithemeticfunctions(char *str)
 		addition(a,b);
 	}
 	
-	else if((strcmp(str,"subtract"))==0)
+	else if((strcmp(str,"sub"))==0)
 	{
 		substraction(a,b);
 	}
 	
-	else if((strcmp(str,"multiply"))==0)
+	else if((strcmp(str,"mul"))==0)
 	{
 		multiplication(a,b);
 	}
 	
-	else if((strcmp(str,"divide"))==0)
+	else if((strcmp(str,"div"))==0)
 	{
 		division(a,b);
 	}
-	
-	else if((strcmp(str,"modulo"))==0)
-	{
-		modulo(a,b);
-	}
-	
-	
 	
 }
 	

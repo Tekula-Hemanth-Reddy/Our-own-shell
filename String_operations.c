@@ -3,13 +3,14 @@
 #include<string.h>
 #include<ctype.h>
 
-
+// String operations such as length,reverse,sort,search,frequency
 
 void search(char string[])
 {
-	char ch;
+	char ch,ch1;
 	int i;
 	printf("\nenter element to be searched");
+	scanf("%c",&ch1);
 	scanf("%c",&ch);
 	for(i=0;string[i]!='\0';i++)
 	{
@@ -27,24 +28,22 @@ void search(char string[])
 
 void sort(char string[])
 {
-	char chTemp;
-	int i,j;
-	for(i=0; string[i]!='\0'; i++)
-    {
-        for(j=0; string[i]!='\0'; j++)
-        {
-            if(string[j]>string[j+1])
-            {
-                chTemp = string[j];
-                string[j] = string[j+1];
-                string[j+1] = chTemp;
-            }
-        }
+   	char temp;
+   int i,j;
+   int n = strlen(string);
+   printf("String before sorting - %s \n", string);
+
+   for (i = 0; i < n-1; i++) {
+      for (j = i+1; j < n; j++) {
+         if (string[i] > string[j]) {
+            temp = string[i];
+            string[i] = string[j];
+            string[j] = temp;
+         }
+      }
     }
-    for(i=0; string[i]!='\0'; i++)
-    {
-    	printf("%c",string[i]);
-    }
+	printf("String after sorting - %s \n", string);
+
 }
 
 void reverse(char string[])
@@ -69,8 +68,9 @@ void reverse(char string[])
 void frequency(char string[])
 {
 	int i,c=0;
-	char ch;
+	char ch,ch1;
 	printf("\nenter element ");
+	scanf("%c",&ch1);
 	scanf("%c",&ch);
 	for(i=0;string[i]!='\0';i++)
 	{
@@ -82,28 +82,28 @@ void frequency(char string[])
 	printf("\nfrequency of %c is %d",ch,c);
 }
 
-void String_Operations(char *ch)
+void String_Operations(char ch[])
 {
 	char string[1000];
 	printf("enter a String");
-	gets(string);
-	if(strcmp(ch,"search"))
+	scanf("%s",string);
+	if(strcmp(ch,"sea")==0)
 	{
 		search(string);
 	}
-	else if(strcmp(ch,"sort"))
+	else if(strcmp(ch,"srt")==0)
 	{
 		sort(string);
 	}
-	else if(strcmp(ch,"length"))
+	else if(strcmp(ch,"len")==0)
 	{
 		printf("string length %d",strlen(string));
 	}
-	else if(strcmp(ch,"reverse"))
+	else if(strcmp(ch,"rev")==0)
 	{
 		reverse(string);
 	}
-	else if(strcmp(ch,"frequency"))
+	else if(strcmp(ch,"fre")==0)
 	{
 		frequency(string);
 	}

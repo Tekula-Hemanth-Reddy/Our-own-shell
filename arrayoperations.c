@@ -1,10 +1,9 @@
-//for array operations
-
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
 #include<string.h>
 
+// for operations on array such as minimum,maximum,sort,find..
 
 void sumofarrayelements(int *arr,int n)
 {
@@ -102,7 +101,7 @@ void frequency_of_an_element(int *arr,int n,int ele_req)
 	printf("The frequency of %d is %d",ele_req,count);
 }
 
-void Array_Functions(char *str)
+void Array_Functions(char str[])
 {
 	
 	printf("Enter the number of elements of the Array");
@@ -119,13 +118,13 @@ void Array_Functions(char *str)
 	
 		
 	
-	if((strcmp(str,"sum"))==0)
+	if((strcmp(str,"asum"))==0)
 	{
 		sumofarrayelements(arr,n);	
 	}
 
 	
-	else if((strcmp(str,"search"))==0)
+	else if((strcmp(str,"asea"))==0)
 	{
 		printf("Enter the element that you wanted to search\n");
 		int ele;
@@ -134,22 +133,22 @@ void Array_Functions(char *str)
 		search_array_element_linearsearch(arr,n,ele);
 	}
 	
-	else if((strcmp(str,"minimum"))==0)
+	else if((strcmp(str,"amin"))==0)
 	{
 		minofarrayelements(arr,n);
 	}
 	
-	else if((strcmp(str,"maximum"))==0)
+	else if((strcmp(str,"amax"))==0)
 	{
 		maxofarrayelements(arr,n);
 	}
 	
-	else if((strcmp(str,"sort"))==0)
+	else if((strcmp(str,"asrt"))==0)
 	{
 		sort_of_elements(arr,n);
 	}
 	
-	else if((strcmp(str,"frequency"))==0)
+	else if((strcmp(str,"afre"))==0)
 	{
 		printf("Enter the element that you wanted to search\n");
 		int ele;

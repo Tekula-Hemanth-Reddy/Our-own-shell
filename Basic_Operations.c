@@ -1,12 +1,14 @@
 #include<stdio.h>
 #include<math.h>
 
+// Basic operations to perform factorial,power,square,square root,gcd,lcm,even or odd,greater,smaller
+
 void factorial()
 {
 	int n,i,p=1;
 	printf("\n enter number");
 	scanf("%d",&n);
-	for(i=0;i<=n;i++)
+	for(i=1;i<=n;i++)
 	{
 		p=p*i;
 	}
@@ -40,12 +42,12 @@ void square()
 
 void squareroot()
 {
-	int n;
-	float i;
+	double n;
+	double i;
 	printf("\n enter element : ");
-	scanf("%d",&n);
-	i=sqrt(n);
-	printf("square of %d is %f",n,i);
+	scanf("%ld",&n);
+	i=n;
+	printf("square of %ld is %lf",n,i);
 	
 }
 
@@ -197,19 +199,19 @@ void smaller()
 
 void Basic_Operations(char *str)
 {
-	if(strcmp(str,"factorial")==0)
+	if(strcmp(str,"fact")==0)
 	{
 		factorial();
 	}
-	else if((strcmp(str,"power"))==0)
+	else if((strcmp(str,"pow"))==0)
 	{
 		power();
 	}
-	else if((strcmp(str,"square"))==0)
+	else if((strcmp(str,"sqr"))==0)
 	{
 		square();
 	}
-	else if((strcmp(str,"squareroot"))==0)
+	else if((strcmp(str,"sqrt"))==0)
 	{
 		squareroot();
 	}
@@ -221,15 +223,15 @@ void Basic_Operations(char *str)
 	{
 		lcm();
 	}
-	else if((strcmp(str,"evenodd"))==0)
+	else if((strcmp(str,"nat"))==0)
 	{
 		evenodd();
 	}
-	else if((strcmp(str,"greater"))==0)
+	else if((strcmp(str,"gre"))==0)
 	{
 		greater();
 	}
-	else if((strcmp(str,"smaller"))==0)
+	else if((strcmp(str,"sml"))==0)
 	{
 		smaller();
 	}
